@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Queries">
+   <children>
+      <TableView fx:id="tableView" layoutX="30.0" layoutY="60.0" prefHeight="485.0" prefWidth="718.0" />
+      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="784.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Запросы">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#symmetricUnionWithoutCondition" text="Симметричное объединение без условия" />
+                  <MenuItem mnemonicParsing="false" onAction="#symmetricUnionWithTextCondition" text="Симметричное объединение с условием по текстовому полю" />
+                  <MenuItem mnemonicParsing="false" onAction="#symmetricUnionWithDateCondition" text="Симметричное объединение с условием по датам" />
+                  <MenuItem mnemonicParsing="false" onAction="#symmetricUnionWithBeetwen" text="Симметричное объединение (диапазон BETWEEN)" />
+                  <MenuItem mnemonicParsing="false" onAction="#symmetricUnionWithLike" text="Симметричное объединение (соответствие шаблону LIKE)" />
+                  <MenuItem mnemonicParsing="false" onAction="#symmetricUnionWithIn" text="Симметричное объединение (принадлежность множеству IN)" />
+                  <MenuItem mnemonicParsing="false" onAction="#leftUnion" text="Левое объединение" />
+                  <MenuItem mnemonicParsing="false" onAction="#symmetricUnionWithDistinct" text="Симметричное объединение с предикатом DISTINCT" />
+                  <MenuItem mnemonicParsing="false" onAction="#requestWithAggregation" text="Запрос с функциями агрегирования" />
+                  <MenuItem mnemonicParsing="false" onAction="#requestWithoutCondition" text="Итоговый запрос без условия" />
+                  <MenuItem mnemonicParsing="false" onAction="#requestWithDataCondition" text="Итоговый запрос с условием на данные" />
+                  <MenuItem mnemonicParsing="false" onAction="#requestWithGroupCondition" text="Итоговый запрос с условием на группы" />
+                  <MenuItem mnemonicParsing="false" onAction="#requestWithDataAndGroupCondition" text="Итоговый запрос с условием на данные и на группы" />
+                  <MenuItem mnemonicParsing="false" onAction="#subordinatedRequestWithComparison" text="Подчиненные запрос со сравнением" />
+                  <MenuItem mnemonicParsing="false" onAction="#subordinatedRequestWithExpression" text="Подчиненный запрос с выражением" />
+                  <MenuItem mnemonicParsing="false" onAction="#subordinatedRequestWithExistence" text="Подчиненный запрос с EXISTS" />
+                  <MenuItem mnemonicParsing="false" onAction="#parametricRequest" text="Параметрический запрос" />
+                  <MenuItem mnemonicParsing="false" onAction="#symmetricUnion" text="Симметричное объединение" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Выход">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#exit" text="Выйти" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>
